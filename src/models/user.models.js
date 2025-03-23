@@ -26,11 +26,11 @@ const UserSchema = new Schema({
     },
     avatar:{
         type:String,//store at cloud ,url of image is here
-        requires:true
+        required:true
 
     },
     coverImage:{
-        type:string
+        type:String
     },
     watchHistory:[{
         type:Schema.Types.ObjectId,
@@ -39,7 +39,7 @@ const UserSchema = new Schema({
 ],
     password:{
         type:String,
-        require:[true,"password is required"]
+        required:[true,"password is required"]
     },
     refreshToken:{
         type:String
